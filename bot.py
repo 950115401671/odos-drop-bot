@@ -1,5 +1,10 @@
 import logging
 import openai
+import os
+
+if os.getenv("RENDER") != "TRUE":
+    print(" Бот работает только на Render. Локальный запуск заблокирован.")
+    exit()
 from aiogram import Bot, Dispatcher, types
 from aiogram.utils import executor
 from dotenv import load_dotenv
