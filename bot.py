@@ -71,7 +71,7 @@ async def on_shutdown(dp):
     await dp.storage.wait_closed()
     logging.warning("Бот остановлен")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     start_webhook(
         dispatcher=dp,
         webhook_path=WEBHOOK_PATH,
